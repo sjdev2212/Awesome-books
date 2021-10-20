@@ -5,7 +5,7 @@
 
 Created my first portfolio project
 
-![screenshot](.\images\Cap.png)
+![screenshot](/images/Cap.png)
 
 Html Webpage with a title 
 
@@ -30,27 +30,21 @@ Open index.html in a web browser
 
 ## Authors
 
-👤 **Anibal Amoroso**
+👤 **Anibal Amoroso**(no coding partner)
 
 - GitHub: (https://github.com/sj1978)
 
 
 
 
-## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/sj1978/Capstone-1/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-Cindy Shin in Behance.
-https://www.behance.net/adagio07
-https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
 
 Microverse
 
