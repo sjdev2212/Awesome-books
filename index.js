@@ -4,8 +4,9 @@ const addBtn = document.querySelector('.btn-add');
 const ul = document.querySelector('ul');
 const form = document.getElementById('form');
 const empty = document.querySelector('.empty');
-const collection = [];
 
+// const collection = localStorage.getItem("book-authors") ;
+const collection  = [];
 function Awesome(book, author) {
   this.book = book;
   this.author = author;
@@ -36,6 +37,7 @@ addBtn.addEventListener('click', (e) => {
 
   const inputs = new Awesome(input.value, input2.value);
   collection.push(inputs);
+  
 
   const text = input.value;
   const text2 = input2.value;
@@ -44,7 +46,10 @@ addBtn.addEventListener('click', (e) => {
     const li = document.createElement('li');
     li.className = 'books-li';
     const p = document.createElement('p');
+    p.className = ".paragraph-1"
     const secondParagraph = document.createElement('p');
+    secondParagraph.className = "paragraph-2";
+
     p.textContent = text;
     secondParagraph.textContent = text2;
 
@@ -55,26 +60,10 @@ addBtn.addEventListener('click', (e) => {
 
     input.value = '';
     empty.style.display = 'none';
+    localStorage.setItem("book-authors",JSON.stringify(collection))
   }
 });
 
-// Storage..............................
 
-const storedInfo = form.querySelectorAll('#input1, #input2');
 
-function setInputs() {
-  localStorage.setItem('book', storedInfo[0].value);
-  localStorage.setItem('author', storedInfo[1].value);
-}
 
-for (let i = 0; i < storedInfo.length; i += 1) {
-  storedInfo[i].addEventListener('focusout', setInputs);
-}
-
-if (localStorage.getItem('book')) {
-  storedInfo[0].setAttribute('value', localStorage.getItem('book'));
-}
-
-if (localStorage.getItem('author')) {
-  storedInfo[1].setAttribute('value', localStorage.getItem('author'));
-}
